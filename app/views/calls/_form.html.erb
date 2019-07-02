@@ -49,8 +49,8 @@
 }
 
 function showPosition(position) {
-  document.getElementById("call_la").value = position.coords.latitude;
-  document.getElementById("call_lo").value = position.coords.longitude;
+  document.getElementById("call_la").value = position.coords.latitude.toFixed(1);
+  document.getElementById("call_lo").value = position.coords.longitude.toFixed(1);
 }
 </script>
 

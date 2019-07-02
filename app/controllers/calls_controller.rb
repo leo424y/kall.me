@@ -4,7 +4,7 @@ class CallsController < ApplicationController
   # GET /calls
   # GET /calls.json
   def index
-    @calls = Call.all
+    @calls = Call.where(la: session[:current_la], lo: session[:current_lo])
   end
 
   # GET /calls/1
@@ -28,6 +28,7 @@ class CallsController < ApplicationController
 
     respond_to do |format|
       if @call.save
+        session[:current_id] = @call.id
         session[:current_tel] = @call.tel
         session[:current_la] = @call.la
         session[:current_lo] = @call.lo
@@ -60,7 +61,7 @@ class CallsController < ApplicationController
   def destroy
     @call.destroy
     respond_to do |format|
-      format.html { redirect_to calls_url, notice: 'Call was successfully destroyed.' }
+      format.html { redirect_to new_call_path, notice: 'Call was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

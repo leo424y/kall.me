@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Calls</h1>
+<h1>Phones Nearby You</h1>
 
 <table>
   <thead>
@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Call', new_call_path %>
+<%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %>
+
+<%# link_to 'New Call', new_call_path %>
