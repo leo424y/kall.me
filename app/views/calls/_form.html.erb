@@ -1,0 +1,57 @@
+<%= form_with(model: call, local: true) do |form| %>
+  <% if call.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(call.errors.count, "error") %> prohibited this call from being saved:</h2>
+
+      <ul>
+      <% call.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tel %>
+    <%= form.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%# form.label :la %>
+    <%= form.hidden_field :la %>
+  </div>
+
+  <div class="field">
+    <%# form.label :lo %>
+    <%= form.hidden_field :lo %>
+  </div>
+
+  <div class="field">
+    <%# form.label :ip %>
+    <%= form.hidden_field :ip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<script type="application/javascript">
+  function getIP(json) {
+    document.getElementById('call_ip').value = json.ip;
+    getLocation();
+  }
+
+  function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+}
+
+function showPosition(position) {
+  document.getElementById("call_la").value = position.coords.latitude;
+  document.getElementById("call_lo").value = position.coords.longitude;
+}
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
