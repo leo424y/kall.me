@@ -29,6 +29,8 @@ class CallsController < ApplicationController
     respond_to do |format|
       if @call.save
         session[:current_tel] = @call.tel
+        session[:current_la] = @call.la
+        session[:current_lo] = @call.lo
 
         format.html { redirect_to calls_path, notice: 'Call was successfully created.' }
         format.json { render :show, status: :created, location: @call }
