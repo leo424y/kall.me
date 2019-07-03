@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 'zh-TW':
-  action_ph: '想做什麼？並按手機號碼，讓附近的人找你一起體驗！'
+  action_ph: '想做什麼？並按聯絡電話，讓附近的人找你一起體驗！'
   index_ph: '附近的大家想做的事，點選進行聯絡！'
   index_na_ph: '目前附近尚無使用者，請稍候重新整理'
   index_end: '結束'
-  index_out_noti: '確定離開？ Kall 將停止分享你的電話與想做的事'
+  index_out_noti: '確定離開？ Kall 會移除你的電話與想做的事'
