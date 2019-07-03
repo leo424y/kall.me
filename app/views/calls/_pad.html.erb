@@ -1,0 +1,112 @@
+<div class="container">
+
+
+		<div class="header">
+			<div class="input" align="right">
+				<input type="text" value='09'>
+			</div>
+
+			<div class="reset" align="left">
+				<button>
+					<i class="icon ion-android-close">X</i>
+				</button>
+			</div>
+		</div>
+
+		<div class="body">
+			<div class="row">
+				<div class="col-3">
+					<button>1</button>
+				</div>
+				<div class="col-3">
+					<button>2</button>
+				</div>
+				<div class="col-3">
+					<button>3</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3">
+					<button>4</button>
+				</div>
+				<div class="col-3">
+					<button>5</button>
+				</div>
+				<div class="col-3">
+					<button>6</button>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col-3">
+					<button>7</button>
+				</div>
+				<div class="col-3">
+					<button>8</button>
+				</div>
+				<div class="col-3">
+					<button>9</button>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col-3">
+					<div class='hb'></div>
+				</div>
+				<div class="col-3">
+					<button>0</button>
+				</div>
+				<div class="col-3">
+					<div class='hb'></div>
+				</div>
+			</div>		
+
+
+			<%# <div class="row">
+				<div class="col-2" align="right">
+					<button id="add">
+						<i class="icon ion-android-add"></i>
+					</button>
+				</div>
+				<div class="col-2" align="left">
+					<button id="call">
+						<i class="icon ion-android-call"></i>
+					</button>
+				</div>
+			</div> %>
+
+		</div>
+
+	</div>
+
+  <script>
+  var input = document.querySelectorAll(".input input")[0];
+var reset = document.querySelectorAll(".reset button")[0];
+var btn = document.querySelectorAll(".col-3 button");
+
+
+for(var i = 0; i < btn.length; i++){
+	btn[i].addEventListener('click', function(){
+
+		var num1 = input.value;
+		var num2 = this.childNodes[0].nodeValue;
+
+		num = num1+num2
+
+		input.value = num;
+    document.getElementById('call_tel').value = num;
+
+    var x= document.getElementById("call_tel").value.length
+    if (x === 10) {
+      document.getElementById("myform").submit();
+    }
+    console.log(x)
+    
+	});
+}
+
+reset.addEventListener('click', function(){
+	input.value = "09";
+});
+  </script>
