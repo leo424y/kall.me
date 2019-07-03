@@ -31,3 +31,6 @@
 
 'zh-TW':
   action_ph: "現在想做什麼？"
+  index_ph: '附近的大家想做的事'
+  index_na_ph: '目前附近尚無使用者'
+

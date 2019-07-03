@@ -5,7 +5,11 @@
 <table class='pure-table' style='width: 100%'>
   <thead>
     <tr>
-      <th>Phones Nearby You</th>
+      <% if @calls.count == 1 %>
+        <th class='pure-table-odd'><%= t('index_na_ph') %></th>
+      <% else %>
+        <th><%= t('index_ph') %></th>
+      <% end %>    
       <%# <th>La</th>
       <th>Lo</th>
       <th>Ip</th>
