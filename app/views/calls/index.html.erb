@@ -18,6 +18,8 @@
   </thead>
 
   <tbody>
+    <tr class='pure-table-odd'>
+    </tr>
     <% @calls.each do |call| %>
       <tr class='pure-table-odd'>
         <% if session[:current_tel] != call.tel %>
@@ -30,7 +32,7 @@
 
 <br>
 <% if @calls.count != 1 %>
-<%= link_to 'Edit', :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
+<%= link_to Call.find(session[:current_id]).action, :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
 |
 <%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %> 
 <% end %>
