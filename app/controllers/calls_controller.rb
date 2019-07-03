@@ -14,7 +14,11 @@ class CallsController < ApplicationController
 
   # GET /calls/new
   def new
-    @call = Call.new
+    if session[:current_id]
+      redirect_to calls_path
+    else
+      @call = Call.new
+    end
   end
 
   # GET /calls/1/edit
@@ -60,6 +64,8 @@ class CallsController < ApplicationController
   # DELETE /calls/1.json
   def destroy
     @call.destroy
+    reset_session
+
     respond_to do |format|
       format.html { redirect_to new_call_path, notice: 'Call was successfully destroyed.' }
       format.json { head :no_content }
