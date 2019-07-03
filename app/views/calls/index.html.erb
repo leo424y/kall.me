@@ -34,9 +34,9 @@
 <center>
 <font size=5>
 <% if @calls.count != 1 %>
-<%= link_to '🖊️' + Call.find(session[:current_id]).action, :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
+<%= link_to '🖊️ ' + Call.find(session[:current_id]).action, :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
 |
-<%= link_to '🔙' + t('index_end'), Call.find(session[:current_id]), method: :delete, data: { confirm: t('index_out_noti') } %> 
+<%= link_to '🔙 ' + t('index_end'), Call.find(session[:current_id]), method: :delete, data: { confirm: t('index_out_noti') } %> 
 <% end %> 
 </font>
 </center>
