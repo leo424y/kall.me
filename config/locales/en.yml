@@ -34,3 +34,4 @@ en:
   index_ph: 'Phones Nearby You'
   index_na_ph: 'No one nearby you now. Please refresh later.'
   index_end: 'End'
+  index_out_noti: 'Stop to make your call visible for people nearby you?'
