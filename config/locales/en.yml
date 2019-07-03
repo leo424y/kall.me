@@ -30,8 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  action_ph: 'What you want to do?'
-  index_ph: 'Phones Nearby You'
+  action_ph: 'What you want to do? Leave your phone. Let the people nearby know. '
+  index_ph: 'Things nearby you. Click and call!'
   index_na_ph: 'No one nearby you now. Please refresh later.'
   index_end: 'End'
   index_out_noti: 'Stop to make your call visible for people nearby you?'
