@@ -14,6 +14,7 @@ class CallsController < ApplicationController
 
   # GET /calls/new
   def new
+    reset_session
     if session[:current_id]
       redirect_to calls_path
     else
