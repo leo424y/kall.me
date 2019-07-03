@@ -31,6 +31,7 @@
 
 en:
   action_ph: 'What you want to do? Leave your phone. Let the people nearby know. '
+  action_hint: 'have a dinner, workout, dancing, go KTV, watch movie'
   index_ph: 'Things nearby you. Click and call!'
   index_na_ph: 'No one nearby you now. Please refresh later.'
   index_end: 'End'
