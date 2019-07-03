@@ -37,6 +37,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
  gem 'pg'
  gem 'rails_12factor', group: :production
 
+gem "rails-i18n"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
