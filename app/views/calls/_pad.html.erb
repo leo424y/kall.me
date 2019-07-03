@@ -109,3 +109,12 @@ reset.addEventListener('click', function(){
 	input.value = "09";
 });
   </script>
+
+<script>
+document.getElementById("myform").onkeypress = function(e) {
+  var key = e.charCode || e.keyCode || 0;     
+  if (key == 13) {
+    e.preventDefault();
+  }
+}
+</script>
