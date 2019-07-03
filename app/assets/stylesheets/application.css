@@ -38,7 +38,7 @@ div {
 
 .header {
 	width:100%;
-	padding-top:40px;
+	padding-top:20px;
 	padding-bottom:10px;
 }
 
@@ -58,7 +58,7 @@ div {
 	box-sizing:border-box;
 	padding:8px;
 	border:none;
-	font-size:40px;
+	font-size:20px;
 	font-weight:lighter;
 	font-family:'montserrat';
 	text-align:right;
@@ -90,8 +90,8 @@ div {
 	background:#fafafa;
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
-	padding-top:40px;
-	padding-bottom:40px;
+	padding-top:20px;
+	padding-bottom:20px;
 	padding-left:20px;
 	padding-right:20px;
 }
