@@ -51,7 +51,7 @@ class CallsController < ApplicationController
   def update
     respond_to do |format|
       if @call.update(call_params)
-        format.html { redirect_to @call, notice: 'Call was successfully updated.' }
+        format.html { redirect_to calls_path, notice: 'Call was successfully updated.' }
         format.json { render :show, status: :ok, location: @call }
       else
         format.html { render :edit }
