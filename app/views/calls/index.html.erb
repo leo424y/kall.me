@@ -35,7 +35,7 @@
 <% if @calls.count != 1 %>
 <%= link_to Call.find(session[:current_id]).action, :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
 |
-<%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %> 
+<%= link_to t('index_end'), Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %> 
 <% end %> 
 </font>
 
