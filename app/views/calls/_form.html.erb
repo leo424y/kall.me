@@ -1,3 +1,4 @@
+<center>
 <%= form_with(model: call, local: true, id: 'myform') do |form| %>
   <% if call.errors.any? %>
     <div id="error_explanation">
@@ -10,6 +11,12 @@
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%# form.label :tel %>
+    <%= form.text_field :action, placeholder: 'What you want to do?', size: '100', style: "font-size:40px" %>
+  </div>
+
 
   <div class="field">
     <%# form.label :tel %>
@@ -35,7 +42,7 @@
     <%# form.submit %>
   </div>
 <% end %>
-
+</center>
 <%= render 'pad' %>
 
 <script type="application/javascript">

@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Phones Nearby You</h1>
+<%# <h1>Phones Nearby You</h1> %>
 
-<table>
+<table class='pure-table' style='width: 100%'>
   <thead>
     <tr>
-      <th>Tel</th>
+      <th>Phones Nearby You</th>
       <%# <th>La</th>
       <th>Lo</th>
       <th>Ip</th>
@@ -15,9 +15,9 @@
 
   <tbody>
     <% @calls.each do |call| %>
-      <tr>
+      <tr class='pure-table-odd'>
         <% if session[:current_tel] != call.tel %>
-          <td><a href="tel:<%= call.tel %>"><%= call.tel %></a></td>
+          <td><a href="tel:<%= call.tel %>"><font size=5><%= call.action !='' ? call.action : call.tel %></font></a></td>
         <% end %>
       </tr>
     <% end %>
@@ -25,7 +25,7 @@
 </table>
 
 <br>
+<%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %> 
 
-<%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %>
 
 <%# link_to 'New Call', new_call_path %>
