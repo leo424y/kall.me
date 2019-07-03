@@ -30,7 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 'zh-TW':
-  action_ph: '想做什麼？並留電話，讓附近的人找你一起體驗！並隨時可取消'
+  site_slogan: ''
+  action_ph: '先填現在想做什麼？並留電話，讓附近的人 Kall 你一起體驗！並隨時可取消'
   action_hint: '吃晚餐, 出團, 打桌遊, 唱歌, 打網球...'
   index_ph: '附近的大家想做的事，點選進行聯絡！'
   index_na_ph: '目前附近尚無使用者，請稍候重新整理'
