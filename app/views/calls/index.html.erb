@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%# notice %></p>
 
 <%# <h1>Phones Nearby You</h1> %>
 
@@ -29,7 +29,10 @@
 </table>
 
 <br>
+<% if @calls.count != 1 %>
+<%= link_to 'Edit', :controller => 'calls', :action => 'edit', :id => session[:current_id] %>
+|
 <%= link_to 'End', Call.find(session[:current_id]), method: :delete, data: { confirm: 'Stop to make your call visible for people nearby you?' } %> 
-
+<% end %>
 
 <%# link_to 'New Call', new_call_path %>

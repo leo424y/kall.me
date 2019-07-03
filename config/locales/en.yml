@@ -32,4 +32,4 @@
 en:
   action_ph: 'What you want to do?'
   index_ph: 'Phones Nearby You'
-  index_na_ph: 'No one nearby you now.'
+  index_na_ph: 'No one nearby you now. Please refresh later.'
