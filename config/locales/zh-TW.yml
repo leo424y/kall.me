@@ -30,7 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 'zh-TW':
-  action_ph: "你現在想做什麼？並留下電話，讓附近的人與你一起！"
+  action_ph: "你現在想做什麼？留個電話，讓附近的人與你一起！"
   index_ph: '附近的大家想做的事，點選進行聯絡！'
   index_na_ph: '目前附近尚無使用者，請稍候重新整理'
   index_end: '結束'
