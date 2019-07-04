@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_034834) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "action"
-    t.text "style"
+    t.text "context"
   end
 
   create_table "rates", force: :cascade do |t|
