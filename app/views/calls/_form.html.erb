@@ -12,22 +12,22 @@
     </div>
   <% end %>
 
-  <h2><%= t('action_ph') %></h2>
+  <h4><%= t('action_ph') %></h4'>
 
   <div class="field">
   <table><tr>
   <td>
   <label>
-    <%= form.radio_button :style, 'resturant', checked: true, style: "width:20px;height:20px;" %> 
-    <font size='5'>
+    <%= form.radio_button :style, 'resturant', checked: true, style: "width:14px;height:14px;" %> 
+    <font size='3'>
     <%= t('resturant') %>
     </font>
     </label>
     </td>
     <td>
     <label>
-    <%= form.radio_button :style, 'cafe', style: "width:20px;height:20px;" %> 
-    <font size='5'>
+    <%= form.radio_button :style, 'cafe', style: "width:14px;height:14px;" %> 
+    <font size='3'>
     <%= t('cafe') %>
     </font>
     </label>
@@ -35,8 +35,8 @@
     </td>
     <td>
         <label>
-    <%= form.radio_button :style, 'bar', style: "width:20px;height:20px;" %> 
-    <font size='5'>
+    <%= form.radio_button :style, 'bar', style: "width:14px;height:14px;" %> 
+    <font size='3'>
     <%= t('bar') %>
     </font>
     </label>
@@ -44,8 +44,8 @@
     </td>
     <td>
         <label>
-    <%= form.radio_button :style, 'public', style: "width:20px;height:20px;" %> 
-    <font size='5'>
+    <%= form.radio_button :style, 'public', style: "width:14px;height:14px;" %> 
+    <font size='3'>
     <%= t('public') %>
     </font>
     </label>
@@ -56,7 +56,7 @@
     </table>
   </div>
   <div class="field">
-    <%= form.text_field :action, placeholder: t('action_hint'), size: '20', style: "font-size:30px", autofocus: 'true' %>
+    <%= form.text_field :action, placeholder: t('action_hint'), size: '10', style: "font-size:30px", autofocus: 'true' %>
   </div>
 
 
