@@ -26,7 +26,7 @@
     </td>
     <td>
     <label>
-    <%= form.radio_button :style, 'cafe', checked: true, style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
+    <%= form.radio_button :style, 'cafe', style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
     <font size='3'>
     <%= t('cafe') %>
     </font>
@@ -35,7 +35,7 @@
     </td>
     <td>
         <label>
-    <%= form.radio_button :style, 'bar', checked: true, style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
+    <%= form.radio_button :style, 'bar', style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
     <font size='3'>
     <%= t('bar') %>
     </font>
@@ -44,7 +44,7 @@
     </td>
     <td>
         <label>
-    <%= form.radio_button :style, 'public', checked: true, style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
+    <%= form.radio_button :style, 'public', style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
     <font size='3'>
     <%= t('public') %>
     </font>
@@ -89,10 +89,32 @@
 <script type="application/javascript">
   function getIP(json) {
     document.getElementById('call_ip').value = json.ip;
-    getLocation();
   }
 
   function getLocation() {
+navigator.permissions.query({
+     name: 'geolocation'
+ }).then(function(result) {
+     if (result.state == 'granted') {
+      //   report(result.state);
+//         geoBtn.style.display = 'none';
+     } else if (result.state == 'prompt') {
+           alert('請先允許取得地理位置，以尋找附近使用者')
+
+//         report(result.state);
+      //   geoBtn.style.display = 'none';
+
+         navigator.geolocation.getCurrentPosition(revealPosition, positionDenied, geoSettings);
+     } else if (result.state == 'denied') {
+           alert('請點選網址左側，設定允許此網站取得地理位置，以尋找附近使用者')
+   //      report(result.state);
+      //   geoBtn.style.display = 'inline';
+     }
+     result.onchange = function() {
+   //      report(result.state);
+     }
+ });
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   }
