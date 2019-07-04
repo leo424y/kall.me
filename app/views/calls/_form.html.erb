@@ -12,10 +12,51 @@
     </div>
   <% end %>
 
+  <h2><%= t('action_ph') %></h2>
+
   <div class="field">
-    <%# form.label :tel %>
-    <%= form.text_field :action, placeholder: t('action_hint'), size: '150', style: "font-size:30px", autofocus: 'true' %>
-    <p><%= t('action_ph') %></p>
+  <table><tr>
+  <td>
+  <label>
+    <%= form.radio_button :style, 'resturant', checked: true, style: "width:20px;height:20px;" %> 
+    <font size='5'>
+    <%= t('resturant') %>
+    </font>
+    </label>
+    </td>
+    <td>
+    <label>
+    <%= form.radio_button :style, 'cafe', style: "width:20px;height:20px;" %> 
+    <font size='5'>
+    <%= t('cafe') %>
+    </font>
+    </label>
+
+    </td>
+    <td>
+        <label>
+    <%= form.radio_button :style, 'bar', style: "width:20px;height:20px;" %> 
+    <font size='5'>
+    <%= t('bar') %>
+    </font>
+    </label>
+
+    </td>
+    <td>
+        <label>
+    <%= form.radio_button :style, 'public', style: "width:20px;height:20px;" %> 
+    <font size='5'>
+    <%= t('public') %>
+    </font>
+    </label>
+
+    </td>
+
+    </tr>
+    </table>
+  </div>
+  <div class="field">
+    <%= form.text_field :action, placeholder: t('action_hint'), size: '20', style: "font-size:30px", autofocus: 'true' %>
   </div>
 
 

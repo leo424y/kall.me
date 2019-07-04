@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_052235) do
+ActiveRecord::Schema.define(version: 2019_07_04_034834) do
 
   create_table "calls", force: :cascade do |t|
     t.string "tel"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_07_03_052235) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "action"
+    t.text "style"
   end
 
   create_table "rates", force: :cascade do |t|
