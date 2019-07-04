@@ -39,5 +39,6 @@
   resturant: '餐廳'
   cafe: '咖啡廳'
   bar: '酒吧'
-  public: '公共空間'
+  public: '活動'
+  sport: '運動'
   shopping: '購物'

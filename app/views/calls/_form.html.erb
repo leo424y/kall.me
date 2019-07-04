@@ -61,6 +61,15 @@
     </label>
 
     </td>
+    <td>
+        <label>
+    <%= form.radio_button :context, 'sport', style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
+    <font size='3'>
+    <%= t('sport') %>
+    </font>
+    </label>
+
+    </td>
 
     </tr>
     </table>
@@ -113,24 +122,29 @@
   }
 
   function changeHint(style) {
-      document.getElementById("call_action").focus();
-  switch (style) {
+    var x= ''
+ switch (style) {
       case 'resturant':
-    document.getElementById("call_action").placeholder = '小象餐廳';
+x = '小象餐廳';
           break;
       case 'bar':
-    document.getElementById("call_action").placeholder = '飛標酒吧';
+    x =   '飛標酒吧';
           break;
       case 'cafe':
-    document.getElementById("call_action").placeholder = '很多咖啡';
+      x = '很多咖啡';
           break;
       case 'public':
-    document.getElementById("call_action").placeholder = '台灣美術館';
+      x = '美術館看展';
           break;
       case 'shopping':
-    document.getElementById("call_action").placeholder = '好事多';
+      x = '好事多';
+          break;
+      case 'sport':
+      x = '公園打籃球';
           break;
   } 
+      document.getElementById("call_action").focus();
+      document.getElementById("call_action").placeholder = x
   }
 </script>
 
