@@ -19,7 +19,7 @@
     <% @calls.each do |call| %>
       <tr class='pure-table-odd'>
         <% if session[:current_tel] != call.tel %>
-          <td><a href="tel:<%= call.tel %>"><font size=5>[<%= t call.style %>] <%= call.action !='' ? call.action : call.tel %></font></a></td>
+          <td><a href="tel:<%= call.tel %>"><font size=5>[<%= t call.style %>] <%= call.action !='' ? call.action : call.tel %></a><a href="https://www.google.com/maps/search/<%= call.action %>"> 📍</a> </font></td>
         <% end %>
       </tr>
     <% end %>
