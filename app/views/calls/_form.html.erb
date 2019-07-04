@@ -52,6 +52,16 @@
 
     </td>
 
+    <td>
+        <label>
+    <%= form.radio_button :context, 'shopping', style: "width:14px;height:14px;", onClick: "changeHint(this.value)" %> 
+    <font size='3'>
+    <%= t('shopping') %>
+    </font>
+    </label>
+
+    </td>
+
     </tr>
     </table>
   </div>
@@ -109,13 +119,16 @@
     document.getElementById("call_action").placeholder = '小象餐廳';
           break;
       case 'bar':
-    document.getElementById("call_action").placeholder = '鐵克諾餐酒館';
+    document.getElementById("call_action").placeholder = '飛標酒吧';
           break;
       case 'cafe':
     document.getElementById("call_action").placeholder = '很多咖啡';
           break;
       case 'public':
     document.getElementById("call_action").placeholder = '台灣美術館';
+          break;
+      case 'shopping':
+    document.getElementById("call_action").placeholder = '好事多';
           break;
   } 
   }
