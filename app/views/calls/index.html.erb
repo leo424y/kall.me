@@ -5,11 +5,7 @@
 <table class='pure-table' style='width: 100%'>
   <thead>
     <tr>
-      <% if @calls.count == 1 %>
-        <th class='pure-table-odd'><%= t('index_na_ph') %></th>
-      <% else %>
-        <th><%= t('index_ph') %></th>
-      <% end %>    
+      <th class='pure-table-odd'><%= t('index_ph') %></th>
       <%# <th>La</th>
       <th>Lo</th>
       <th>Ip</th>
@@ -23,7 +19,7 @@
     <% @calls.each do |call| %>
       <tr class='pure-table-odd'>
         <% if session[:current_tel] != call.tel %>
-          <td><a href="tel:<%= call.tel %>"><font size=5><%= call.action !='' ? call.action : call.tel %></font></a></td>
+          <td><a href="tel:<%= call.tel %>"><font size=5>[<%= t call.style %>] <%= call.action !='' ? call.action : call.tel %></font></a></td>
         <% end %>
       </tr>
     <% end %>
